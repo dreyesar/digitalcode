@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Code - Cursos de Programación</title>
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --primary: #a959ff;
+      --text-light: #e0e0e0;
+      --text-dark: #ccc;
+      --card-bg: #1a1a1a;
+      --accent: #1f002e;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    header {
+  background: linear-gradient(to bottom, #000000, #522dff);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .landing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0c0615;
+      background-image: url(''); /* puedes agregar una imagen si querés */
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .landing h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: var(--primary);
+    }
+
+    .landing h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 1rem;
+    }
+
+    .landing p {
+      margin-top: 1rem;
+      max-width: 600px;
+      color: var(--text-dark);
+    }
+
+    .landing a {
+      margin-top: 2rem;
+      display: inline-block;
+      background: var(--primary);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 0.4rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .landing a:hover {
+      background: #c17dff;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid #333;
+      padding: 2rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .card.animate {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .card p {
+      color: var(--text-dark);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .card a:hover {
+      background-color: var(--primary);
+      color: var(--bg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--accent);
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .landing h1 {
+        font-size: 2.2rem;
+      }
+
+      .landing h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <section class="landing" id="home" style="background: linear-gradient(to bottom, #000000, #522dff); color: white; position: relative;">
+  <nav style="position: absolute; top: 2rem; left: 2rem; right: 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <strong style="font-size: 1.2rem;">Digital Code</strong>
+    <div>
+      <a href="#Home" style="margin-left: 1rem; background: transparent; border: none; color: white; text-decoration: none; font-size: 0.9rem; font-weight: 400;">Home</a>
+      <a href="#About" style="margin-left: 1rem; background: transparent; border: none; color: white; text-decoration: none; font-size: 0.9rem; font-weight: 400;">About</a>
+      <a href="#Content" style="margin-left: 1rem; background: transparent; border: none; color: white; text-decoration: none; font-size: 0.9rem; font-weight: 400;">Content</a>
+      <a href="#Contact" style="margin-left: 1rem; background: transparent; border: none; color: white; text-decoration: none; font-size: 0.9rem; font-weight: 400;">Contact</a>
+    </div>
+  </nav>
+  <div style="text-align: center;">
+    <h2 style="font-size: 2rem; font-weight: 300; margin: 0;">Aprende a</h2>
+    <h1 style="font-size: 5rem; font-weight: 500; margin: 1rem 0 2rem;">Programar</h1>
+    
+  </div>
+  <div style="position: absolute; bottom: 2rem; left: 2rem; font-size: 0.9rem; color: #ccc;">
+    www.digitalcode.ar
+  </div>
+  <div style="position: absolute; bottom: 2rem; right: 2rem; font-size: 0.9rem; color: #ccc;">
+    hello@digitalcode.ar
+  </div>
+</section>
+
+  <section id="about">
+    <h2>¿Qué vas a aprender?</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">Este curso te guiará desde los fundamentos de la programación con Python hasta temas avanzados como POO, testing, automatización y buenas prácticas. Es 100% online y estructurado en clases semanales.</p>
+  </section>
+
+<section id="programa-intro-web">
+  <h2>Programa: Introducción al Diseño Web</h2>
+  <p>Este curso te enseña a crear sitios web desde cero. Aprenderás HTML, CSS, conceptos de estructura, diseño responsivo y buenas prácticas.</p>
+  <ul>
+    <li>¿Qué es la web? Cómo funciona un navegador.</li>
+    <li>Estructura básica de un documento HTML.</li>
+    <li>Estilos con CSS: colores, fuentes, márgenes.</li>
+    <li>Diseño adaptable (responsive design).</li>
+    <li>Prácticas con tu primer sitio web real.</li>
+  </ul>
+</section>
+
+<section id="programa-avanzado-web">
+  <h2>Programa: Diseño Web Avanzado</h2>
+  <p>Explorá técnicas modernas como Flexbox, CSS Grid, animaciones, diseño mobile-first, y uso de Tailwind. Ideal para dar el salto al diseño profesional.</p>
+  <ul>
+    <li>CSS Grid y Flexbox en profundidad.</li>
+    <li>Animaciones con CSS y microinteracciones.</li>
+    <li>Optimización responsive avanzada.</li>
+    <li>Uso de Tailwind CSS y frameworks modernos.</li>
+    <li>Creación de landing pages profesionales.</li>
+  </ul>
+</section>
+
+<section id="programa-python">
+  <h2>Programa: Programación en Python</h2>
+  <p>Desde variables y bucles hasta POO, funciones, testing, automatización y scripting real. Un curso completo y práctico en el lenguaje más versátil del mercado.</p>
+  <ul>
+    <li>Variables, tipos de datos y estructuras de control.</li>
+    <li>Bucles for y while, condicionales.</li>
+    <li>Funciones y programación modular.</li>
+    <li>Programación Orientada a Objetos (POO).</li>
+    <li>Automatización de tareas y pequeños proyectos reales.</li>
+  </ul>
+</section>
+
+<section id="plan">
+  <h2>Nuestros Cursos</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Introducción al Diseño Web</h3>
+      <p>Aprendé desde cero cómo crear páginas web con HTML, CSS y un poco de JavaScript. Ideal para principiantes.</p>
+      <a href="#programa-intro-web">Ver programa</a>
+    </div>
+    <div class="card">
+      <h3>Diseño Web Avanzado</h3>
+      <p>Dominá Flexbox, Grid, animaciones, frameworks modernos como Tailwind y preparate para el diseño profesional.</p>
+      <a href="#programa-intro-web">Ver programa</a>
+    </div>
+    <div class="card">
+      <h3>Programación en Python</h3>
+      <p>Curso completo de Python desde lo más básico hasta temas como funciones, bucles, POO y automatización.</p>
+      <a href="#programa-intro-web">Ver programa</a>
+    </div>
+  </div>
+</section>
+
+  <section id="others">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">¿Querés más información? Escribinos a <a href="mailto:hello@digitalcode.ar">hello@digitalcode.ar</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Digital Code — www.digitalcode.ar
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
